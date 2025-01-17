@@ -41,7 +41,7 @@ Key features include:
 
 ### Frontend:
 - **Blazor WebAssembly** - A C#-based client-side framework for building web apps.
-- **MudBlazor** - UI components library for Blazor (Material Design).
+- **Blazorbootstrap** - UI components library for Blazor (Bootstrap).
 - **Chart.js** - Library for creating interactive charts and graphs for financial data.
 - **Blazorise** (optional) - For additional UI components and flexibility.
 
