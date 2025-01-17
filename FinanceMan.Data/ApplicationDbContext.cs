@@ -12,16 +12,11 @@ namespace FinanceMan.Data
 
         public ApplicationDbContext()
         {
-            var docsFilePath = Environment.SpecialFolder.MyDocuments.ToString();
-            DbPath = Path.Join(Path.GetFullPath(docsFilePath), "FinanceMan.db");
+            var docsFilePath = Environment.SpecialFolder.MyDocuments;
+            DbPath = Path.Join(Environment.GetFolderPath(docsFilePath), "FinanceMan.db");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
             optionsBuilder.UseSqlite($"Data Source={DbPath}");
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
     }
 }
