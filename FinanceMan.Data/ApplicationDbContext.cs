@@ -5,7 +5,6 @@ namespace FinanceMan.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Account> Accounts { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<User> Users { get; set; }
         public string DbPath { get; set; }

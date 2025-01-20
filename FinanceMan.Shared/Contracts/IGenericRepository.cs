@@ -2,5 +2,6 @@
 
 public interface IGenericRepository<T>
 {
-    void Add(T entity);
+    Task AddAsync(T entity);
+    IQueryable<T> GetAll();
 }

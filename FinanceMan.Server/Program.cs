@@ -1,5 +1,6 @@
 using FinanceMan.Data;
 using FinanceMan.Data.Repositories;
+using FinanceMan.Server.Services;
 using FinanceMan.Shared.Contracts;
 using Scalar.AspNetCore;
 
@@ -12,8 +13,9 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<ApplicationDbContext>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+builder.Services.AddScoped<TransactionService>();
+builder.Services.AddScoped<UserService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
